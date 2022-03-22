@@ -9,7 +9,7 @@ const cors = require('cors');
 // const req = require('express/lib/request');
 
 const app = express();
-const port = 8080;
+
 //body parser and cors add on express using use() function
 app.use(bodyParser.json())
 app.use(cors())
@@ -121,6 +121,6 @@ client.connect(err => {
 })
 
 //Conect with local server
-app.listen(process.env.port || port, () => {
+app.listen(process.env.port || 8080, () => {
     console.log('sever is running');
 })
