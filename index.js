@@ -56,6 +56,9 @@ client.connect(err => {
             })
     });
 
+    app.get('/', (req, res) => {
+        res.send("Doctors portal is running");
+    })
     //get all appoinments
     app.get('/allpatients', (req, res) => {
         appoinmentsCollection.find({})
